@@ -63,14 +63,11 @@ const updateMemeCanvas = (canvas, image, topText, bottomText) => {
 };
 
 saveButton.addEventListener("click", () => {
-  // Convert the canvas to png image
   const imgData = canvas.toDataURL("image/png");
 
-  // Create a download link for the image
   const link = document.createElement("a");
   link.download = "myImageWithText.png";
   link.href = imgData;
 
-  // Trigger the download
   link.click();
 });
